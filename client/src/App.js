@@ -27,13 +27,16 @@ function App() {
       <header className="App-header">
         <h1>QR CODE GENERATOR</h1>
         <input
+          className="input-box"
           type="text"
           placeholder="Enter URL"
           value={url}
           onChange={(e) => setURL(e.target.value)}
         />
 
-        <button onClick={generateQRCode}>Generate</button>
+        <button className="button" onClick={generateQRCode}>
+          Generate
+        </button>
         {qrCode && (
           <div>
             <h3>Generated QR Code</h3>
